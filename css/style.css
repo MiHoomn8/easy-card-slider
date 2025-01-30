@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+body {
+    background-color: #8C52FF;
+    margin: 0 auto;
+    font-family: 'Arial';
+}
+
+div.card {
+    width: 350px;
+    height: 465px;
+    background-color: #fff;
+    border-radius: 25px;
+    margin-top: 140px;
+    margin-inline: auto;
+}
+
+div.header img.logo {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-inline: 8px;
+}
+
+div.header img#facebook {
+    margin-left: 120px;
+}
+
+img.perfil {
+    width: 145px;
+    height: 140px;
+    border-radius: 32px;
+    border: solid 3px #fff;
+    outline: solid 3px #7237C7;
+    display: block;
+    margin-inline: auto;
+}
+
+h1 {
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 35px;
+}
+
+h2 {
+    color: #202020;
+    font-size: 18px;
+    font-weight: 800;
+    text-align: center;
+    margin-top: -10px;
+    font-family: 'nunito';
+}
+
+div.star {
+    color: #792CEA;
+    font-size: 35px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+div.buttons button {
+    background-color: #7626DD;
+    color: #FFD2FF;
+    width: 120px;
+    height: 40px;
+    font-size: 16px;
+    font-family: 'nunito';
+    font-weight: 500;
+    border: none;
+    border-radius: 9px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+div.buttons button:active {
+    background-color: #4f1897;
+}
+
+#button-left {
+    margin-left: 50px;
+    margin-right: 10px;
+}
+
+div#container {
+    display: flex;
+    margin-inline: 140px;
+}
