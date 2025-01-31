@@ -1,90 +1,101 @@
-@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+/* Você está importanto a font Crimson e a Nunito, mas só está utilizando a Nunito e a Arial */
+@import url("https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
 
 body {
-    background-color: #8C52FF;
-    margin: 0 auto;
-    font-family: 'Arial';
+  background-color: #8c52ff;
+  /* Não entendi porque está criando margem no body, sendo que ele não compete com nenhum outro elemento para espaçamento externo */
+  margin: 0 auto;
+  /* Sempre ao dizer que a fonte é de uma família, garanta que tenha essa fonte disponível no seu projeto, na máquina do usuário ou precisa importar. Nesse caso, a fonte Arial é padrão em toda máquina. Mas se preocupe em importar quando não tiver certeza */
+  font-family: "Arial";
 }
 
 div.card {
-    width: 350px;
-    height: 465px;
-    background-color: #fff;
-    border-radius: 25px;
-    margin-top: 140px;
-    margin-inline: auto;
+  width: 350px;
+  height: 465px;
+  background-color: #fff;
+  border-radius: 25px;
+  /* Esse margin top você usou para dar um espaçamento afastando do topo. Mas usamos margins quando queremos espaçar irmãos. Nesse caso, o ideal seria usar padding-top no elemento pai dos cards para dar um espaçamento interno */
+  margin-top: 140px;
+  /* poderia usar no elemento pai do card um justify-content: center no lugar do margin-inline */
+  margin-inline: auto;
 }
 
 div.header img.logo {
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    padding-inline: 8px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding-inline: 8px;
 }
 
 div.header img#facebook {
-    margin-left: 120px;
+  margin-left: 120px;
 }
 
 img.perfil {
-    width: 145px;
-    height: 140px;
-    border-radius: 32px;
-    border: solid 3px #fff;
-    outline: solid 3px #7237C7;
-    display: block;
-    margin-inline: auto;
+  width: 145px;
+  height: 140px;
+  border-radius: 32px;
+  border: solid 3px #fff;
+  outline: solid 3px #7237c7;
+  display: block;
+  margin-inline: auto;
 }
 
 h1 {
-    font-size: 24px;
-    font-weight: 700;
-    text-align: center;
-    margin-top: 35px;
+  font-size: 24px;
+  font-weight: 700;
+  text-align: center;
+  margin-top: 35px;
 }
 
 h2 {
-    color: #202020;
-    font-size: 18px;
-    font-weight: 800;
-    text-align: center;
-    margin-top: -10px;
-    font-family: 'nunito';
+  color: #202020;
+  font-size: 18px;
+  font-weight: 800;
+  text-align: center;
+  /* Ao invés de usar margin negativa para aproximar mais esse texto do de cima, o ideal seria diminuir o margin-bottom do de cima para esse poder se aproximar mais e não ser necessário usar margin negativa */
+  margin-top: -10px;
+  font-family: "nunito";
 }
 
 div.star {
-    color: #792CEA;
-    font-size: 35px;
-    text-align: center;
-    margin-top: 10px;
+  color: #792cea;
+  font-size: 35px;
+  text-align: center;
+  margin-top: 10px;
 }
 
 div.buttons button {
-    background-color: #7626DD;
-    color: #FFD2FF;
-    width: 120px;
-    height: 40px;
-    font-size: 16px;
-    font-family: 'nunito';
-    font-weight: 500;
-    border: none;
-    border-radius: 9px;
-    margin-top: 20px;
-    cursor: pointer;
+  background-color: #7626dd;
+  color: #ffd2ff;
+  width: 120px;
+  height: 40px;
+  font-size: 16px;
+  font-family: "nunito";
+  font-weight: 500;
+  border: none;
+  border-radius: 9px;
+  margin-top: 20px;
+  cursor: pointer;
 }
 
+/* faltou a opção :hover */
 div.buttons button:active {
-    background-color: #4f1897;
+  background-color: #4f1897;
 }
 
 #button-left {
-    margin-left: 50px;
-    margin-right: 10px;
+  margin-left: 50px;
+  margin-right: 10px;
 }
 
 div#container {
-    display: flex;
-    margin-inline: 140px;
+  display: flex;
+  /* Se o objetivo é centralizar o container com margin-inline, nesse caso caberia a propriedade auto. margin-inline: auto; */
+  margin-inline: 140px;
 }
+
+/* OBS: no geral, você está utilizando margins para centralizar ou ajustar posições dos elementos. Isso poderia ser feito com display flex com maior facilidade e que fique de forma responsiva */
+/* estudar mais o display flex e entender melhor o box model. */

@@ -1,40 +1,73 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
     <title>Easy Card Slider</title>
-</head>
-<body>
-<div id="container">
-    <div class="card">
+  </head>
+  <body>
+    <div id="container">
+      <!-- Parabéns pela class com nome card. Tem um nome intuitívo. -->
+      <div class="card">
+        <!-- Essa class header ficou u pouco genérica. um header pode ser observado nesse link: https://carbondesignsystem.com/static/747f762a7c63f0bf743bc3c32a5bcd8a/3cbba/header-anatomy.png -->
+        <!-- Caso queria se referir a essa parte do card como header, deveria ser card-header ou card__header, dando a entender que é um cabeçalho do teu card e não um header do site -->
         <div class="header">
-            <img id="facebook" class="logo" src="./img/facebook-icon.jpeg" alt="">
-            <img class="logo" src="./img/twitter-icon.jpeg" alt="">
-            <img class="logo" src="./img/github-icon.jpeg" alt="">
+          <!-- Essas imagens são de icones de redes sociais. Dá a entender que deveriam ter uma tag "nav" por se tratar de links de navegação. Então deveria ser uma lista "ul" dentro da tag "nav", seguido das "li" e dentro das "li" os links. -->
+          <!-- Exemplo:
+               <nav>
+                <ul>
+                    <li>
+                        <a href="#">
+                            <img
+                            id="facebook"
+                            class="logo"
+                            src="./img/facebook-icon.jpeg"
+                            alt=""
+                          />
+                        </a>
+                    </li>
+                </ul>
+             </nav> -->
+          <!-- Outra observação, as imagens estão sem descrição no "alt". Porque apenas a imagem do facebook tem um id? Como não tem nenhum javascript, está usando id para estilizar? Não está errado usar id, mas não é uma forma escalável. O ideal é sempre usar class -->
+          <img
+            id="facebook"
+            class="logo"
+            src="./img/facebook-icon.jpeg"
+            alt=""
+          />
+          <img class="logo" src="./img/twitter-icon.jpeg" alt="" />
+          <img class="logo" src="./img/github-icon.jpeg" alt="" />
         </div>
-        <img class="perfil" src="./img/zenitsu.jpg" alt="">
+        <img class="perfil" src="./img/zenitsu.jpg" alt="" />
 
+        <!-- Só posso ter um "h1" por página. Nessa página temos mais de um "h1". Imagine que isso é um site que tem um "h1" em algum lugar e que tenha cards. Nesses cards poderia começar a estrutura a partir de um "h2", presumindo que acima desses card em algum lugar teria o "h1" -->
         <h1>Ally Pearson</h1>
 
         <h2>Web Developer</h2>
 
+        <!-- Normalmente usamos "divs" para agrupar elementos. Nesse caso, é apenas um texto simples. Como não tem semântica de "p", poderia ser um "span". -->
         <div class="star">★★★☆☆</div>
 
         <div class="buttons">
-            <button id="button-left">About Me</button>
-            <button id="button-right">Hire Me</button>
+          <!-- Esses botões estão com o id "button-left" e "button-right". Não é uma boa prática usar id para estilizar. O ideal é usar class. -->
+          <button id="button-left">About Me</button>
+          <button id="button-right">Hire Me</button>
         </div>
-    </div>
+      </div>
 
-    <div class="card">
+      <div class="card">
         <div class="header">
-            <img id="facebook" class="logo" src="./img/facebook-icon.jpeg" alt="">
-            <img class="logo" src="./img/twitter-icon.jpeg" alt="">
-            <img class="logo" src="./img/github-icon.jpeg" alt="">
+          <img
+            id="facebook"
+            class="logo"
+            src="./img/facebook-icon.jpeg"
+            alt=""
+          />
+          <img class="logo" src="./img/twitter-icon.jpeg" alt="" />
+          <img class="logo" src="./img/github-icon.jpeg" alt="" />
         </div>
-        <img class="perfil" src="./img/tanjiro.jpg" alt="">
+        <img class="perfil" src="./img/tanjiro.jpg" alt="" />
 
         <h1>Dominic Wells</h1>
 
@@ -43,18 +76,23 @@
         <div class="star">★★★★★</div>
 
         <div class="buttons">
-            <button id="button-left">About Me</button>
-            <button id="button-right">Hire Me</button>
+          <button id="button-left">About Me</button>
+          <button id="button-right">Hire Me</button>
         </div>
-    </div>
+      </div>
 
-    <div class="card">
+      <div class="card">
         <div class="header">
-            <img id="facebook" class="logo" src="./img/facebook-icon.jpeg" alt="">
-            <img class="logo" src="./img/twitter-icon.jpeg" alt="">
-            <img class="logo" src="./img/github-icon.jpeg" alt="">
+          <img
+            id="facebook"
+            class="logo"
+            src="./img/facebook-icon.jpeg"
+            alt=""
+          />
+          <img class="logo" src="./img/twitter-icon.jpeg" alt="" />
+          <img class="logo" src="./img/github-icon.jpeg" alt="" />
         </div>
-        <img class="perfil" src="./img/inosuke.jpg" alt="">
+        <img class="perfil" src="./img/inosuke.jpg" alt="" />
 
         <h1>Kylie Smith</h1>
 
@@ -63,10 +101,12 @@
         <div class="star">★★★★☆</div>
 
         <div class="buttons">
-            <button id="button-left">About Me</button>
-            <button id="button-right">Hire Me</button>
+          <button id="button-left">About Me</button>
+          <button id="button-right">Hire Me</button>
         </div>
+      </div>
     </div>
-</div>
-</body>
+  </body>
 </html>
+
+<!-- OBS: anotações gerais, pesquisar um pouco mais sobre semântica -->
