@@ -3,10 +3,11 @@
 
 body {
   background-color: #8c52ff;
-  /* Não entendi porque está criando margem no body, sendo que ele não compete com nenhum outro elemento para espaçamento externo */
-  margin: 0 auto;
-  /* Sempre ao dizer que a fonte é de uma família, garanta que tenha essa fonte disponível no seu projeto, na máquina do usuário ou precisa importar. Nesse caso, a fonte Arial é padrão em toda máquina. Mas se preocupe em importar quando não tiver certeza */
+  /* ✅ Sempre ao dizer que a fonte é de uma família, garanta que tenha essa fonte disponível no seu projeto, na máquina do usuário ou precisa importar. Nesse caso, a fonte Arial é padrão em toda máquina. Mas se preocupe em importar quando não tiver certeza */
   font-family: "Arial";
+  padding-top: 100px;
+  display: flex;
+  justify-content: center;
 }
 
 div.card {
@@ -14,28 +15,34 @@ div.card {
   height: 465px;
   background-color: #fff;
   border-radius: 25px;
-  /* Esse margin top você usou para dar um espaçamento afastando do topo. Mas usamos margins quando queremos espaçar irmãos. Nesse caso, o ideal seria usar padding-top no elemento pai dos cards para dar um espaçamento interno */
-  margin-top: 140px;
-  /* poderia usar no elemento pai do card um justify-content: center no lugar do margin-inline */
-  margin-inline: auto;
+  /* ✅ Esse margin top você usou para dar um espaçamento afastando do topo. Mas usamos margins quando queremos espaçar irmãos. Nesse caso, o ideal seria usar padding-top no elemento pai dos cards para dar um espaçamento interno */
+  padding-top: 2px;
+  margin-inline: 18px;
+  /* ✅poderia usar no elemento pai do card um justify-content: center no lugar do margin-inline */
 }
 
-div.header img.logo {
+nav ul {
+  list-style: none;
+  padding-inline: 10px;
+  margin: 0;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+}
+
+div.card-header img.logo {
   width: 20px;
   height: 20px;
   border-radius: 50%;
   margin-top: 20px;
   margin-bottom: 20px;
-  padding-inline: 8px;
-}
-
-div.header img#facebook {
-  margin-left: 120px;
 }
 
 img.perfil {
-  width: 145px;
-  height: 140px;
+  width: 150px;
+  height: 147px;
   border-radius: 32px;
   border: solid 3px #fff;
   outline: solid 3px #7237c7;
@@ -43,28 +50,34 @@ img.perfil {
   margin-inline: auto;
 }
 
-h1 {
-  font-size: 24px;
+h2 {
+  font-size: 23px;
   font-weight: 700;
   text-align: center;
-  margin-top: 35px;
+  margin: 0;
+  padding-top: 30px;
 }
 
-h2 {
-  color: #202020;
+h3 {
+  color: #3a3939;
   font-size: 18px;
   font-weight: 800;
   text-align: center;
-  /* Ao invés de usar margin negativa para aproximar mais esse texto do de cima, o ideal seria diminuir o margin-bottom do de cima para esse poder se aproximar mais e não ser necessário usar margin negativa */
-  margin-top: -10px;
   font-family: "nunito";
+  margin: 0;
+  padding-top: 3px;
+  padding-bottom: 10px;
 }
 
-div.star {
+/* ✅ Ao invés de usar margin negativa para aproximar mais esse texto do de cima, o ideal seria diminuir o margin-bottom do de cima para esse poder se aproximar mais e não ser necessário usar margin negativa */
+
+span {
   color: #792cea;
+  width: 100%;
   font-size: 35px;
   text-align: center;
-  margin-top: 10px;
+  display: block;
+  margin-bottom: 15px;
 }
 
 div.buttons button {
@@ -77,24 +90,29 @@ div.buttons button {
   font-weight: 500;
   border: none;
   border-radius: 9px;
-  margin-top: 20px;
   cursor: pointer;
+  margin-top: 13px;
 }
 
-/* faltou a opção :hover */
-div.buttons button:active {
+/* ✅ faltou a opção :hover */
+
+div.buttons button:hover {
   background-color: #4f1897;
 }
 
-#button-left {
+div.buttons button:active {
+  background-color: #3b0f75;
+}
+
+.button-left {
   margin-left: 50px;
-  margin-right: 10px;
+  margin-right: 13px;
 }
 
 div#container {
   display: flex;
-  /* Se o objetivo é centralizar o container com margin-inline, nesse caso caberia a propriedade auto. margin-inline: auto; */
-  margin-inline: 140px;
+/* ✅ Se o objetivo é centralizar o container com margin-inline, nesse caso caberia a propriedade auto. margin-inline: auto; */
+  margin-inline: auto;
 }
 
 /* OBS: no geral, você está utilizando margins para centralizar ou ajustar posições dos elementos. Isso poderia ser feito com display flex com maior facilidade e que fique de forma responsiva */
